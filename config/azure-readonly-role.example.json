@@ -1,0 +1,8 @@
+{
+ "Name":"Capstone Posture Read Only",
+ "IsCustom":true,
+ "Description":"Template for management-plane inventory. Review with the subscription owner before provisioning.",
+ "Actions":["Microsoft.Storage/storageAccounts/read","Microsoft.Network/networkSecurityGroups/read","Microsoft.Authorization/roleAssignments/read","Microsoft.Security/assessments/read"],
+ "NotActions":[],"DataActions":[],"NotDataActions":[],
+ "AssignableScopes":["/subscriptions/YOUR_SUBSCRIPTION_ID"]
+}

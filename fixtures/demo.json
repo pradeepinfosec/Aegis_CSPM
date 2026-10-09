@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "source": "demo",
+  "resources": [
+    {
+      "id": "aws:web",
+      "name": "payments-api",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": true,
+        "exploitable": true,
+        "cvss": 9.8,
+        "kev": true,
+        "monitoring_enabled": false,
+        "criticality": 0.9,
+        "sensitivity": 0.8
+      }
+    },
+    {
+      "id": "aws:service",
+      "name": "application-service-identity",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": false,
+        "mfa_enabled": null,
+        "days_inactive": null,
+        "criticality": 0.9,
+        "sensitivity": 0.8,
+        "exploitable": false,
+        "kev": false,
+        "internet_reachable": false
+      }
+    },
+    {
+      "id": "aws:data",
+      "name": "regulated-customer-data",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": false,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": true,
+        "anonymous_disabled": true,
+        "criticality": 1.0,
+        "sensitivity": 1.0,
+        "internet_reachable": false,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "aws:public",
+      "name": "public-export-archive",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": true,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": false,
+        "anonymous_disabled": false,
+        "criticality": 0.8,
+        "sensitivity": 0.9,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "aws:sg",
+      "name": "legacy-admin-ingress",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "network",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "admin_open": true,
+        "internet_reachable": null,
+        "criticality": 0.7,
+        "sensitivity": 0.4,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "aws:user",
+      "name": "dormant-contractor",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": true,
+        "mfa_enabled": false,
+        "days_inactive": 124,
+        "telemetry_complete": true,
+        "internet_reachable": false,
+        "criticality": 0.6,
+        "sensitivity": 0.6,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "aws:private",
+      "name": "internal-build-worker",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": false,
+        "exploitable": false,
+        "monitoring_enabled": true,
+        "criticality": 0.3,
+        "sensitivity": 0.2,
+        "kev": false
+      }
+    },
+    {
+      "id": "aws:unknown",
+      "name": "unobserved-research-bucket",
+      "provider": "aws",
+      "account": "111122223333",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": null,
+        "encryption_enabled": null,
+        "logging_enabled": null,
+        "secure_transport": null,
+        "anonymous_disabled": null,
+        "criticality": null,
+        "sensitivity": null
+      }
+    },
+    {
+      "id": "azure:web",
+      "name": "customer-api",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": true,
+        "exploitable": true,
+        "cvss": 9.8,
+        "kev": true,
+        "monitoring_enabled": false,
+        "criticality": 0.9,
+        "sensitivity": 0.8
+      }
+    },
+    {
+      "id": "azure:service",
+      "name": "application-service-identity",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": false,
+        "mfa_enabled": null,
+        "days_inactive": null,
+        "criticality": 0.9,
+        "sensitivity": 0.8,
+        "exploitable": false,
+        "kev": false,
+        "internet_reachable": false
+      }
+    },
+    {
+      "id": "azure:data",
+      "name": "regulated-customer-data",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": false,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": true,
+        "anonymous_disabled": true,
+        "criticality": 1.0,
+        "sensitivity": 1.0,
+        "internet_reachable": false,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "azure:public",
+      "name": "public-export-archive",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": true,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": false,
+        "anonymous_disabled": false,
+        "criticality": 0.8,
+        "sensitivity": 0.9,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "azure:sg",
+      "name": "legacy-admin-ingress",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "network",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "admin_open": true,
+        "internet_reachable": null,
+        "criticality": 0.7,
+        "sensitivity": 0.4,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "azure:user",
+      "name": "dormant-contractor",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": true,
+        "mfa_enabled": false,
+        "days_inactive": 124,
+        "telemetry_complete": true,
+        "internet_reachable": false,
+        "criticality": 0.6,
+        "sensitivity": 0.6,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "azure:private",
+      "name": "internal-build-worker",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": false,
+        "exploitable": false,
+        "monitoring_enabled": true,
+        "criticality": 0.3,
+        "sensitivity": 0.2,
+        "kev": false
+      }
+    },
+    {
+      "id": "azure:unknown",
+      "name": "unobserved-research-bucket",
+      "provider": "azure",
+      "account": "demo-subscription",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": null,
+        "encryption_enabled": null,
+        "logging_enabled": null,
+        "secure_transport": null,
+        "anonymous_disabled": null,
+        "criticality": null,
+        "sensitivity": null
+      }
+    },
+    {
+      "id": "gcp:web",
+      "name": "analytics-api",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": true,
+        "exploitable": true,
+        "cvss": 9.8,
+        "kev": true,
+        "monitoring_enabled": false,
+        "criticality": 0.9,
+        "sensitivity": 0.8
+      }
+    },
+    {
+      "id": "gcp:service",
+      "name": "application-service-identity",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": false,
+        "mfa_enabled": null,
+        "days_inactive": null,
+        "criticality": 0.9,
+        "sensitivity": 0.8,
+        "exploitable": false,
+        "kev": false,
+        "internet_reachable": false
+      }
+    },
+    {
+      "id": "gcp:data",
+      "name": "regulated-customer-data",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": false,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": true,
+        "anonymous_disabled": true,
+        "criticality": 1.0,
+        "sensitivity": 1.0,
+        "internet_reachable": false,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "gcp:public",
+      "name": "public-export-archive",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": true,
+        "encryption_enabled": true,
+        "logging_enabled": false,
+        "secure_transport": false,
+        "anonymous_disabled": false,
+        "criticality": 0.8,
+        "sensitivity": 0.9,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "gcp:sg",
+      "name": "legacy-admin-ingress",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "network",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "admin_open": true,
+        "internet_reachable": null,
+        "criticality": 0.7,
+        "sensitivity": 0.4,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "gcp:user",
+      "name": "dormant-contractor",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "identity",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "broad_privilege": true,
+        "console_enabled": true,
+        "mfa_enabled": false,
+        "days_inactive": 124,
+        "telemetry_complete": true,
+        "internet_reachable": false,
+        "criticality": 0.6,
+        "sensitivity": 0.6,
+        "exploitable": false,
+        "kev": false
+      }
+    },
+    {
+      "id": "gcp:private",
+      "name": "internal-build-worker",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "workload",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "internet_reachable": false,
+        "exploitable": false,
+        "monitoring_enabled": true,
+        "criticality": 0.3,
+        "sensitivity": 0.2,
+        "kev": false
+      }
+    },
+    {
+      "id": "gcp:unknown",
+      "name": "unobserved-research-bucket",
+      "provider": "gcp",
+      "account": "demo-project",
+      "kind": "storage",
+      "observed_at": "2026-10-07T00:00:00+00:00",
+      "source": "synthetic scenario fixture",
+      "attributes": {
+        "public_access": null,
+        "encryption_enabled": null,
+        "logging_enabled": null,
+        "secure_transport": null,
+        "anonymous_disabled": null,
+        "criticality": null,
+        "sensitivity": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "aws:web",
+      "to": "aws:service",
+      "type": "runs_as",
+      "verified": true,
+      "evidence": "Synthetic workload identity binding; scenario manifest v1"
+    },
+    {
+      "from": "aws:service",
+      "to": "aws:data",
+      "type": "can_read",
+      "verified": true,
+      "evidence": "Synthetic effective read grant; scenario manifest v1"
+    },
+    {
+      "from": "azure:web",
+      "to": "azure:service",
+      "type": "runs_as",
+      "verified": true,
+      "evidence": "Synthetic workload identity binding; scenario manifest v1"
+    },
+    {
+      "from": "azure:service",
+      "to": "azure:data",
+      "type": "can_read",
+      "verified": true,
+      "evidence": "Synthetic effective read grant; scenario manifest v1"
+    },
+    {
+      "from": "gcp:web",
+      "to": "gcp:service",
+      "type": "runs_as",
+      "verified": true,
+      "evidence": "Synthetic workload identity binding; scenario manifest v1"
+    },
+    {
+      "from": "gcp:service",
+      "to": "gcp:data",
+      "type": "can_read",
+      "verified": true,
+      "evidence": "Synthetic effective read grant; scenario manifest v1"
+    }
+  ],
+  "connectors": [
+    {
+      "provider": "aws",
+      "status": "demo",
+      "detail": "Synthetic evidence. No cloud API was called."
+    },
+    {
+      "provider": "azure",
+      "status": "demo",
+      "detail": "Synthetic evidence. No cloud API was called."
+    },
+    {
+      "provider": "gcp",
+      "status": "demo",
+      "detail": "Synthetic evidence. No cloud API was called."
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "snapshot": {
+    "schema_version": "1.0",
+    "source": "demo",
+    "resources": [
+      {
+        "id": "A_lab_local",
+        "name": "A_lab_local",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.1,
+          "sensitivity": 0.1,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "B_dev_local",
+        "name": "B_dev_local",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.2,
+          "sensitivity": 0.2,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "C_test_public",
+        "name": "C_test_public",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": true,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.2,
+          "sensitivity": 0.1,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "D_internal_batch",
+        "name": "D_internal_batch",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.4,
+          "sensitivity": 0.3,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "E_prod_private",
+        "name": "E_prod_private",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.9,
+          "sensitivity": 0.9,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "F_prod_exposed",
+        "name": "F_prod_exposed",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 9.8,
+          "internet_reachable": true,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.9,
+          "sensitivity": 0.9,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "G_prod_known_exploit",
+        "name": "G_prod_known_exploit",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 8.1,
+          "internet_reachable": true,
+          "kev": true,
+          "exploitable": true,
+          "criticality": 1.0,
+          "sensitivity": 1.0,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "H_sensitive_identity_path",
+        "name": "H_sensitive_identity_path",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 8.1,
+          "internet_reachable": true,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.9,
+          "sensitivity": 1.0,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "H_sensitive_identity_path:identity",
+        "name": "H_sensitive_identity_path:identity",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "identity",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "broad_privilege": false,
+          "console_enabled": false,
+          "criticality": 0.9,
+          "sensitivity": 1.0,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": false
+        }
+      },
+      {
+        "id": "H_sensitive_identity_path:data",
+        "name": "H_sensitive_identity_path:data",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "storage",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "public_access": false,
+          "encryption_enabled": true,
+          "logging_enabled": true,
+          "secure_transport": true,
+          "anonymous_disabled": true,
+          "sensitivity": 1.0,
+          "criticality": 1.0
+        }
+      },
+      {
+        "id": "I_lab_known_exploit",
+        "name": "I_lab_known_exploit",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 8.1,
+          "internet_reachable": false,
+          "kev": true,
+          "exploitable": true,
+          "criticality": 0.1,
+          "sensitivity": 0.1,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "J_data_private",
+        "name": "J_data_private",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 7.5,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 1.0,
+          "sensitivity": 1.0,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "K_prod_identity_path",
+        "name": "K_prod_identity_path",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 8.1,
+          "internet_reachable": true,
+          "kev": true,
+          "exploitable": true,
+          "criticality": 1.0,
+          "sensitivity": 1.0,
+          "monitoring_enabled": true
+        }
+      },
+      {
+        "id": "K_prod_identity_path:identity",
+        "name": "K_prod_identity_path:identity",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "identity",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "broad_privilege": false,
+          "console_enabled": false,
+          "criticality": 1.0,
+          "sensitivity": 1.0,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": false
+        }
+      },
+      {
+        "id": "K_prod_identity_path:data",
+        "name": "K_prod_identity_path:data",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "storage",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "public_access": false,
+          "encryption_enabled": true,
+          "logging_enabled": true,
+          "secure_transport": true,
+          "anonymous_disabled": true,
+          "sensitivity": 1.0,
+          "criticality": 1.0
+        }
+      },
+      {
+        "id": "L_staging",
+        "name": "L_staging",
+        "provider": "aws",
+        "account": "synthetic-ranking",
+        "kind": "workload",
+        "observed_at": "2026-10-07T00:00:00+00:00",
+        "source": "author-defined ranking scenario",
+        "attributes": {
+          "cvss": 7.5,
+          "internet_reachable": false,
+          "kev": false,
+          "exploitable": true,
+          "criticality": 0.3,
+          "sensitivity": 0.2,
+          "monitoring_enabled": true
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": "H_sensitive_identity_path",
+        "to": "H_sensitive_identity_path:identity",
+        "type": "runs_as",
+        "verified": true,
+        "evidence": "Synthetic identity binding"
+      },
+      {
+        "from": "H_sensitive_identity_path:identity",
+        "to": "H_sensitive_identity_path:data",
+        "type": "can_read",
+        "verified": true,
+        "evidence": "Synthetic read grant"
+      },
+      {
+        "from": "K_prod_identity_path",
+        "to": "K_prod_identity_path:identity",
+        "type": "runs_as",
+        "verified": true,
+        "evidence": "Synthetic identity binding"
+      },
+      {
+        "from": "K_prod_identity_path:identity",
+        "to": "K_prod_identity_path:data",
+        "type": "can_read",
+        "verified": true,
+        "evidence": "Synthetic read grant"
+      }
+    ]
+  },
+  "labels": {
+    "A_lab_local": 0,
+    "B_dev_local": 0,
+    "C_test_public": 1,
+    "D_internal_batch": 1,
+    "E_prod_private": 2,
+    "F_prod_exposed": 3,
+    "G_prod_known_exploit": 3,
+    "H_sensitive_identity_path": 3,
+    "I_lab_known_exploit": 1,
+    "J_data_private": 2,
+    "K_prod_identity_path": 3,
+    "L_staging": 1
+  }
+}

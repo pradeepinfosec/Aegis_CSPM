@@ -1,0 +1,415 @@
+{
+  "version": "policy-priority-v1",
+  "weights": {
+    "severity": 0.3,
+    "exposure": 0.2,
+    "exploitability": 0.2,
+    "impact": 0.2,
+    "path": 0.1
+  },
+  "rules": [
+    {
+      "id": "STO001",
+      "title": "Storage permits anonymous reads",
+      "kinds": [
+        "storage"
+      ],
+      "field": "public_access",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.85,
+      "domain": "Configuration",
+      "description": "A collected policy or public ACL permits anonymous reads. Effective access still depends on surrounding controls.",
+      "remediation": "Remove anonymous grants and validate application access using a nonprivileged principal.",
+      "framework": [
+        "NIST80053:AC-3",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": {
+        "field": "public_access",
+        "value": false
+      },
+      "techniques": [
+        "T1530"
+      ],
+      "severity_basis": "High potential data disclosure from an anonymous read grant; owner sensitivity determines impact."
+    },
+    {
+      "id": "STO002",
+      "title": "Storage encryption is disabled",
+      "kinds": [
+        "storage"
+      ],
+      "field": "encryption_enabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.7,
+      "domain": "Configuration",
+      "description": "At-rest encryption is explicitly disabled in the supplied evidence. A missing setting is unknown, not disabled.",
+      "remediation": "Enable provider encryption; separately evaluate key ownership and rotation requirements.",
+      "framework": [
+        "NIST80053:SC-28",
+        "NISTCSF:PR.DS"
+      ],
+      "fix": {
+        "field": "encryption_enabled",
+        "value": true
+      },
+      "severity_basis": "Loss of at-rest confidentiality protection under storage compromise; does not itself establish external exposure."
+    },
+    {
+      "id": "STO003",
+      "title": "Storage access logging is disabled",
+      "kinds": [
+        "storage"
+      ],
+      "field": "logging_enabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.45,
+      "domain": "Compliance evidence",
+      "description": "The inspected access logging channel is disabled. Other audit channels may exist and require separate verification.",
+      "remediation": "Enable the appropriate access audit channel with retention and least-privilege log storage.",
+      "framework": [
+        "NIST80053:AU-12",
+        "NISTCSF:DE.CM"
+      ],
+      "fix": {
+        "field": "logging_enabled",
+        "value": true
+      },
+      "severity_basis": "Audit and investigation visibility gap; lower direct compromise contribution than a public data grant."
+    },
+    {
+      "id": "STO004",
+      "title": "Storage transport protection is absent",
+      "kinds": [
+        "storage"
+      ],
+      "field": "secure_transport",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.65,
+      "domain": "Configuration",
+      "description": "Evidence explicitly indicates that HTTPS transport is not enforced.",
+      "remediation": "Enforce HTTPS and minimum TLS requirements after compatibility testing.",
+      "framework": [
+        "NIST80053:SC-8",
+        "NISTCSF:PR.DS"
+      ],
+      "fix": {
+        "field": "secure_transport",
+        "value": true
+      },
+      "severity_basis": "Transport confidentiality and integrity protection gap; exploitability depends on actual traffic and network position."
+    },
+    {
+      "id": "STO005",
+      "title": "Storage permits anonymous access configuration",
+      "kinds": [
+        "storage"
+      ],
+      "field": "anonymous_disabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.5,
+      "domain": "Configuration",
+      "description": "The account can permit public containers. This setting alone does not prove an anonymously readable container.",
+      "remediation": "Disable account-level anonymous access where public content is not an approved requirement.",
+      "framework": [
+        "NIST80053:AC-3",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": {
+        "field": "anonymous_disabled",
+        "value": true
+      },
+      "severity_basis": "Public configuration capability rather than observed data exposure; lower anchor than STO001."
+    },
+    {
+      "id": "NET001",
+      "title": "Network has a broad inbound administration rule",
+      "kinds": [
+        "network"
+      ],
+      "field": "admin_open",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.8,
+      "domain": "Exposure",
+      "description": "An enabled inbound rule permits Internet-wide SSH or RDP. Routing, instance binding and higher-priority denies determine actual reachability.",
+      "remediation": "Restrict sources to approved administration networks or use a bastion. Validate effective routes and rules.",
+      "framework": [
+        "NIST80053:SC-7",
+        "NISTCSF:PR.IR"
+      ],
+      "fix": {
+        "field": "admin_open",
+        "value": false
+      },
+      "techniques": [
+        "T1133"
+      ],
+      "severity_basis": "Potential external administration entry point; effective reachability is separately assessed."
+    },
+    {
+      "id": "IAM001",
+      "title": "Identity has a broad privilege grant",
+      "kinds": [
+        "identity"
+      ],
+      "field": "broad_privilege",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.85,
+      "domain": "Identity",
+      "description": "A broad grant is present. Boundaries, denies, conditions and resource policies can restrict effective authorization.",
+      "remediation": "Review the grant, scope and dependencies; reduce privileges only after owner approval and operational tests.",
+      "framework": [
+        "NIST80053:AC-6",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": {
+        "field": "broad_privilege",
+        "value": false
+      },
+      "techniques": [
+        "T1078.004"
+      ],
+      "severity_basis": "Broad authorization can amplify a compromised identity; limiting policies and alternate grants remain contextual."
+    },
+    {
+      "id": "IAM002",
+      "title": "Console user has no registered MFA device",
+      "kinds": [
+        "identity"
+      ],
+      "field": "mfa_enabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.8,
+      "domain": "Identity",
+      "description": "A console-enabled user has no registered MFA device in the inspected IAM API. Federation and conditional access require separate checks.",
+      "remediation": "Require approved MFA or use federation; verify enforcement rather than relying only on device registration.",
+      "framework": [
+        "NIST80053:IA-2",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": {
+        "field": "mfa_enabled",
+        "value": true
+      },
+      "when": {
+        "console_enabled": true
+      },
+      "severity_basis": "Missing registered MFA for a console user weakens an account takeover defense; enforcement still needs review."
+    },
+    {
+      "id": "IAM003",
+      "title": "Identity has no observed activity for over 90 days",
+      "kinds": [
+        "identity"
+      ],
+      "field": "days_inactive",
+      "operator": "greater",
+      "fail_value": 90,
+      "severity": 0.45,
+      "domain": "Identity",
+      "description": "A complete declared telemetry window contains no activity for over 90 days. This is a review candidate, not proof of unnecessary access.",
+      "remediation": "Check seasonal, recovery and automation duties, missing data-plane logs and ownership before changing access.",
+      "framework": [
+        "NIST80053:AC-2",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": null,
+      "severity_basis": "Dormancy is a governance review signal rather than proof of misuse; deliberately lower severity."
+    },
+    {
+      "id": "WRK001",
+      "title": "Workload has an exploitable vulnerability signal",
+      "kinds": [
+        "workload"
+      ],
+      "field": "exploitable",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.9,
+      "domain": "Workload",
+      "description": "A native or imported vulnerability assessment marks an exploitable condition. CVSS is used only if supplied.",
+      "remediation": "Patch or isolate after testing; confirm asset mapping and rescan to validate the fix.",
+      "framework": [
+        "NIST80053:SI-2",
+        "NISTCSF:PR.PS"
+      ],
+      "fix": {
+        "field": "exploitable",
+        "value": false
+      },
+      "techniques": [
+        "T1190"
+      ],
+      "severity_basis": "Supplied CVSS normalized to [0,1]; fallback 0.9 only for an explicit exploitability assertion without CVSS."
+    },
+    {
+      "id": "WRK002",
+      "title": "Workload security monitoring is disabled",
+      "kinds": [
+        "workload"
+      ],
+      "field": "monitoring_enabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.6,
+      "domain": "Workload",
+      "description": "The collected signal explicitly reports missing workload monitoring. This project does not deploy a runtime agent.",
+      "remediation": "Enable workload protection and validate detection events and coverage.",
+      "framework": [
+        "NIST80053:SI-4",
+        "NISTCSF:DE.CM"
+      ],
+      "fix": {
+        "field": "monitoring_enabled",
+        "value": true
+      },
+      "severity_basis": "Loss of workload detection visibility; a missing monitoring channel is not proof of compromise."
+    },
+    {
+      "id": "EXP001",
+      "title": "Workload is reachable from the Internet",
+      "kinds": [
+        "workload"
+      ],
+      "field": "internet_reachable",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.55,
+      "domain": "Exposure",
+      "description": "A supplied reachability assessment asserts Internet access. A public IP alone is not accepted as this assertion.",
+      "remediation": "Reduce reachability using approved ingress, private endpoints or tested segmentation.",
+      "framework": [
+        "NIST80053:SC-7",
+        "NISTCSF:PR.IR"
+      ],
+      "fix": {
+        "field": "internet_reachable",
+        "value": false
+      },
+      "severity_basis": "Internet reachability increases opportunity but may be an approved service requirement; exploit signal is separate."
+    },
+    {
+      "id": "K8S001",
+      "title": "Cluster-admin role bound to an unauthenticated or over-privileged group",
+      "kinds": [
+        "kubernetes"
+      ],
+      "field": "k8s_admin_exposed",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.85,
+      "domain": "Configuration",
+      "description": "Cluster-admin role bound to an unauthenticated or over-privileged group; permits broad workload compromise within a Kubernetes environment.",
+      "remediation": "Restrict cluster-admin bindings to trusted users.",
+      "framework": [
+        "NIST80053:AC-6",
+        "NISTCSF:PR.AA"
+      ],
+      "fix": {
+        "field": "k8s_admin_exposed",
+        "value": false
+      },
+      "severity_basis": "Author policy anchor; review risk methodology"
+    },
+    {
+      "id": "K8S002",
+      "title": "Missing network policies allowing unrestricted pod-to-pod communication",
+      "kinds": [
+        "kubernetes"
+      ],
+      "field": "k8s_netpol_missing",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.65,
+      "domain": "Configuration",
+      "description": "Missing network policies allowing unrestricted pod-to-pod communication; facilitates lateral movement, though exploitability depends on network topology.",
+      "remediation": "Implement default-deny network policies.",
+      "framework": [
+        "NIST80053:SC-7",
+        "NISTCSF:PR.AC"
+      ],
+      "fix": {
+        "field": "k8s_netpol_missing",
+        "value": false
+      },
+      "severity_basis": "Author policy anchor; review risk methodology"
+    },
+    {
+      "id": "DB001",
+      "title": "Missing at-rest encryption for a graph database or relational instance",
+      "kinds": [
+        "database"
+      ],
+      "field": "encryption_enabled",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.7,
+      "domain": "Configuration",
+      "description": "Missing at-rest encryption for a graph database or relational instance; loss of confidentiality upon underlying volume compromise without establishing direct network exposure.",
+      "remediation": "Enable at-rest encryption on database volumes.",
+      "framework": [
+        "NIST80053:SC-28",
+        "NISTCSF:PR.DS"
+      ],
+      "fix": {
+        "field": "encryption_enabled",
+        "value": true
+      },
+      "severity_basis": "Author policy anchor; review risk methodology"
+    },
+    {
+      "id": "DSPM001",
+      "title": "Unclassified or unconsented PII discovered in unmanaged storage",
+      "kinds": [
+        "storage"
+      ],
+      "field": "unmanaged_pii",
+      "operator": "equals",
+      "fail_value": true,
+      "severity": 0.9,
+      "domain": "Data Security",
+      "description": "Unclassified or unconsented Personal Identifiable Information (PII) discovered in unmanaged storage; severe regulatory impact depending on data sensitivity mapping.",
+      "remediation": "Classify and secure PII using DSPM controls.",
+      "framework": [
+        "NIST80053:PE-19",
+        "NISTCSF:PR.DS"
+      ],
+      "fix": {
+        "field": "unmanaged_pii",
+        "value": false
+      },
+      "severity_basis": "Author policy anchor; review risk methodology"
+    },
+    {
+      "id": "SEC001",
+      "title": "Missing or misconfigured continuous vulnerability telemetry agent",
+      "kinds": [
+        "workload"
+      ],
+      "field": "telemetry_agent_active",
+      "operator": "equals",
+      "fail_value": false,
+      "severity": 0.6,
+      "domain": "Monitoring",
+      "description": "Missing or misconfigured continuous vulnerability telemetry agent (e.g., Defender or Wazuh); represents a security monitoring gap rather than a direct exploit path.",
+      "remediation": "Deploy and verify security telemetry agents.",
+      "framework": [
+        "NIST80053:SI-4",
+        "NISTCSF:DE.CM"
+      ],
+      "fix": {
+        "field": "telemetry_agent_active",
+        "value": true
+      },
+      "severity_basis": "Author policy anchor; review risk methodology"
+    }
+  ]
+}

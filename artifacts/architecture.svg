@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="650" height="355" preserveAspectRatio="xMinYMin meet" viewBox="0 0 650 355" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="650" height="355"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-355)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="10" y="245" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="42.64" y="288.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,576) scale(1,-1)">Read only cloud APIs</text>
+			<text x="44.64399999999999" y="269.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,538) scale(1,-1)">AWS  Azure  Google</text>
+			<rect x="235" y="245" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="262.318" y="288.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,576) scale(1,-1)">Normalize observations</text>
+			<text x="261.976" y="269.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,538) scale(1,-1)">Source and timestamps</text>
+			<rect x="460" y="245" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="490.984" y="288.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,576) scale(1,-1)">Tri state policy checks</text>
+			<text x="481.972" y="269.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,538) scale(1,-1)">Passed  Failed  Unknown</text>
+			<rect x="460" y="125" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="485.974" y="168.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,336) scale(1,-1)">Explicit graph and score</text>
+			<text x="487.306" y="149.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,298) scale(1,-1)">Factors and uncertainty</text>
+			<rect x="235" y="125" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="284.644" y="168.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,336) scale(1,-1)">Snapshot store</text>
+			<text x="266.302" y="149.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,298) scale(1,-1)">SQLite and local audit</text>
+			<rect x="10" y="125" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="44.980000000000004" y="168.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,336) scale(1,-1)">Reviewer dashboard</text>
+			<text x="36.97" y="149.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,298) scale(1,-1)">Evidence and decisions</text>
+			<rect x="10" y="5" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="52.653999999999996" y="48.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,96) scale(1,-1)">What if simulation</text>
+			<text x="42.64" y="29.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,58) scale(1,-1)">Copied evidence only</text>
+			<rect x="235" y="5" width="180" height="70" rx="5" ry="5" style="stroke: rgb(61%,68%,73%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,96%); fill-rule: evenodd;"/>
+			<text x="275.638" y="48.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,96) scale(1,-1)">Bounded assistant</text>
+			<text x="269.974" y="29.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(9%,15%,20%); stroke:none;" transform="translate(0,58) scale(1,-1)">Validated finding IDs</text>
+			<path d="M 190,280 L 235,280 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="235 280, 228 284, 228 276" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 415,280 L 460,280 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="460 280, 453 284, 453 276" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 550,245 L 550,195 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="550 195, 546 202, 554 202" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 460,160 L 415,160 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="415 160, 422 164, 422 156" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 235,160 L 190,160 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="190 160, 197 164, 197 156" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 100,125 L 100,75 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="100 75, 96 82, 104 82" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<path d="M 325,125 L 325,75 Z" style="stroke: rgb(26%,39%,45%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="325 75, 321 82, 329 82" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,39%,45%); fill-rule: evenodd;"/>
+			<text x="485.842" y="38" style="font-family: Times-Roman; font-size: 12px;fill: rgb(26%,35%,41%); stroke:none;" transform="translate(0,76) scale(1,-1)">No cloud write component</text>
+		</g>
+	</g>
+</svg>

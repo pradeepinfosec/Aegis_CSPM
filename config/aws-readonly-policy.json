@@ -1,0 +1,7 @@
+{
+ "Version":"2012-10-17",
+ "Statement":[
+  {"Sid":"InventoryReads","Effect":"Allow","Action":["sts:GetCallerIdentity","iam:ListUsers","iam:GetLoginProfile","iam:ListMFADevices","s3:ListAllMyBuckets","s3:GetBucketPolicyStatus","s3:GetBucketPublicAccessBlock","s3:GetBucketLogging","ec2:DescribeInstances","ec2:DescribeSecurityGroups"],"Resource":"*"},
+  {"Sid":"OptionalNativeFindingsRead","Effect":"Allow","Action":["securityhub:GetFindings"],"Resource":"*"}
+ ]
+}

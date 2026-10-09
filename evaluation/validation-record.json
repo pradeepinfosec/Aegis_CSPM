@@ -1,0 +1,13 @@
+{
+  "validated_on": "2026-10-07",
+  "python": "3.12.14",
+  "automated_tests": 47,
+  "automated_test_result": "passed",
+  "browser_checks": 13,
+  "browser_result": "passed",
+  "report_pages": 31,
+  "cloud_accounts_authenticated": false,
+  "external_llm_tested": false,
+  "docker_tested": false,
+  "source": "See docs/VALIDATION.md for detailed limits"
+}

@@ -1,0 +1,7 @@
+# Optional: demo uses Python standard library only. Resolve and freeze for your live environment.
+boto3>=1.35,<2
+azure-identity>=1.19,<2
+google-auth>=2.35,<3
+requests>=2.32,<3
+reportlab>=4.0.0
+python-docx>=1.0.0

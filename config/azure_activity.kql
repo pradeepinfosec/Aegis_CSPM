@@ -1,0 +1,8 @@
+// Discovery only. Requires an Azure Log Analytics workspace with exported activity.
+// Do not equate zero returned events with zero real activity or unnecessary access.
+AzureActivity
+| where TimeGenerated >= ago(90d)
+| where ActivityStatusValue =~ "Success"
+| summarize EventCount=count(), FirstSeen=min(TimeGenerated), LastSeen=max(TimeGenerated)
+    by Caller, OperationNameValue, SubscriptionId, ResourceId
+| order by LastSeen desc

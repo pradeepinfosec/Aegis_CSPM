@@ -1,0 +1,11 @@
+{
+  "principal_id": "synthetic-service-principal",
+  "plane": "Azure Resource Manager management plane only",
+  "window": {"start": "2026-07-09T00:00:00Z", "end": "2026-10-07T00:00:00Z", "source": "Synthetic full-window event fixture"},
+  "actions": ["Microsoft.Storage/storageAccounts/*"],
+  "not_actions": ["Microsoft.Storage/storageAccounts/delete"],
+  "operation_catalog": ["Microsoft.Storage/storageAccounts/read", "Microsoft.Storage/storageAccounts/write", "Microsoft.Storage/storageAccounts/delete", "Microsoft.Storage/storageAccounts/listKeys/action"],
+  "observed_operations": ["Microsoft.Storage/storageAccounts/read"],
+  "telemetry_complete": true,
+  "warning": "Completeness is asserted for the synthetic fixture only. Live AzureActivity does not contain all data-plane calls or every management-plane read."
+}

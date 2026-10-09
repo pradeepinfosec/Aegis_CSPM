@@ -1,0 +1,301 @@
+{
+  "created_at": "2026-10-07T08:07:48.938826+00:00",
+  "dataset": "12 author-labelled synthetic vulnerability scenarios, 16 graph resources",
+  "labels": "Author assumptions for controlled comparison; not independent expert ground truth",
+  "tie_break": "Severity baseline uses lexical resource ID; full models use stable finding ID",
+  "methods": {
+    "severity_only": {
+      "ndcg_at_5": 0.1095,
+      "precision_at_5_relevance_3": 0.0,
+      "top_5": [
+        "A_lab_local",
+        "B_dev_local",
+        "C_test_public",
+        "D_internal_batch",
+        "E_prod_private"
+      ],
+      "ranking": [
+        {
+          "resource": "A_lab_local",
+          "priority": 98.0,
+          "relevance": 0
+        },
+        {
+          "resource": "B_dev_local",
+          "priority": 98.0,
+          "relevance": 0
+        },
+        {
+          "resource": "C_test_public",
+          "priority": 98.0,
+          "relevance": 1
+        },
+        {
+          "resource": "D_internal_batch",
+          "priority": 98.0,
+          "relevance": 1
+        },
+        {
+          "resource": "E_prod_private",
+          "priority": 98.0,
+          "relevance": 2
+        },
+        {
+          "resource": "F_prod_exposed",
+          "priority": 98.0,
+          "relevance": 3
+        },
+        {
+          "resource": "G_prod_known_exploit",
+          "priority": 81.0,
+          "relevance": 3
+        },
+        {
+          "resource": "H_sensitive_identity_path",
+          "priority": 81.0,
+          "relevance": 3
+        },
+        {
+          "resource": "I_lab_known_exploit",
+          "priority": 81.0,
+          "relevance": 1
+        },
+        {
+          "resource": "K_prod_identity_path",
+          "priority": 81.0,
+          "relevance": 3
+        },
+        {
+          "resource": "J_data_private",
+          "priority": 75.0,
+          "relevance": 2
+        },
+        {
+          "resource": "L_staging",
+          "priority": 75.0,
+          "relevance": 1
+        }
+      ]
+    },
+    "context_without_graph": {
+      "ndcg_at_5": 0.9595,
+      "precision_at_5_relevance_3": 0.8,
+      "top_5": [
+        "G_prod_known_exploit",
+        "K_prod_identity_path",
+        "F_prod_exposed",
+        "H_sensitive_identity_path",
+        "C_test_public"
+      ],
+      "ranking": [
+        {
+          "resource": "G_prod_known_exploit",
+          "priority": 84.3,
+          "relevance": 3
+        },
+        {
+          "resource": "K_prod_identity_path",
+          "priority": 84.3,
+          "relevance": 3
+        },
+        {
+          "resource": "F_prod_exposed",
+          "priority": 83.4,
+          "relevance": 3
+        },
+        {
+          "resource": "H_sensitive_identity_path",
+          "priority": 79.1,
+          "relevance": 3
+        },
+        {
+          "resource": "C_test_public",
+          "priority": 68.6,
+          "relevance": 1
+        },
+        {
+          "resource": "E_prod_private",
+          "priority": 68.4,
+          "relevance": 2
+        },
+        {
+          "resource": "J_data_private",
+          "priority": 63.5,
+          "relevance": 2
+        },
+        {
+          "resource": "D_internal_batch",
+          "priority": 57.6,
+          "relevance": 1
+        },
+        {
+          "resource": "B_dev_local",
+          "priority": 54.4,
+          "relevance": 0
+        },
+        {
+          "resource": "A_lab_local",
+          "priority": 52.4,
+          "relevance": 0
+        },
+        {
+          "resource": "I_lab_known_exploit",
+          "priority": 51.3,
+          "relevance": 1
+        },
+        {
+          "resource": "L_staging",
+          "priority": 48.7,
+          "relevance": 1
+        }
+      ]
+    },
+    "context_with_graph": {
+      "ndcg_at_5": 0.9595,
+      "precision_at_5_relevance_3": 0.8,
+      "top_5": [
+        "K_prod_identity_path",
+        "H_sensitive_identity_path",
+        "G_prod_known_exploit",
+        "F_prod_exposed",
+        "C_test_public"
+      ],
+      "ranking": [
+        {
+          "resource": "K_prod_identity_path",
+          "priority": 94.3,
+          "relevance": 3
+        },
+        {
+          "resource": "H_sensitive_identity_path",
+          "priority": 89.1,
+          "relevance": 3
+        },
+        {
+          "resource": "G_prod_known_exploit",
+          "priority": 84.3,
+          "relevance": 3
+        },
+        {
+          "resource": "F_prod_exposed",
+          "priority": 83.4,
+          "relevance": 3
+        },
+        {
+          "resource": "C_test_public",
+          "priority": 68.6,
+          "relevance": 1
+        },
+        {
+          "resource": "E_prod_private",
+          "priority": 68.4,
+          "relevance": 2
+        },
+        {
+          "resource": "J_data_private",
+          "priority": 63.5,
+          "relevance": 2
+        },
+        {
+          "resource": "D_internal_batch",
+          "priority": 57.6,
+          "relevance": 1
+        },
+        {
+          "resource": "B_dev_local",
+          "priority": 54.4,
+          "relevance": 0
+        },
+        {
+          "resource": "A_lab_local",
+          "priority": 52.4,
+          "relevance": 0
+        },
+        {
+          "resource": "I_lab_known_exploit",
+          "priority": 51.3,
+          "relevance": 1
+        },
+        {
+          "resource": "L_staging",
+          "priority": 48.7,
+          "relevance": 1
+        }
+      ]
+    }
+  },
+  "sensitivity": [
+    {
+      "weight": "severity",
+      "multiplier": 0.8,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "severity",
+      "multiplier": 1.2,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "exposure",
+      "multiplier": 0.8,
+      "ndcg_at_5": 1.0,
+      "top_5_overlap": 0.8
+    },
+    {
+      "weight": "exposure",
+      "multiplier": 1.2,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "exploitability",
+      "multiplier": 0.8,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "exploitability",
+      "multiplier": 1.2,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "impact",
+      "multiplier": 0.8,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "impact",
+      "multiplier": 1.2,
+      "ndcg_at_5": 1.0,
+      "top_5_overlap": 0.8
+    },
+    {
+      "weight": "path",
+      "multiplier": 0.8,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    },
+    {
+      "weight": "path",
+      "multiplier": 1.2,
+      "ndcg_at_5": 0.9595,
+      "top_5_overlap": 1.0
+    }
+  ],
+  "local_assessment_runtime_ms": {
+    "runs": 30,
+    "median": 0.298,
+    "p95": 0.319
+  },
+  "limitations": [
+    "Small constructed dataset with intentional context advantages",
+    "Scenarios and labels are authored together; label leakage risk",
+    "No learned coefficients or independent holdout validation",
+    "No live cloud or external LLM performance claim",
+    "No statistical significance established"
+  ]
+}

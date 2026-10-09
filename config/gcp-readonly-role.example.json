@@ -1,0 +1,6 @@
+{
+ "title":"Capstone Posture Read Only",
+ "description":"Review permission availability and binding scope before creating this custom role. SCC requires separate parent-scope grants.",
+ "stage":"GA",
+ "includedPermissions":["storage.buckets.list","storage.buckets.get","storage.buckets.getIamPolicy","compute.firewalls.list","resourcemanager.projects.getIamPolicy"]
+}

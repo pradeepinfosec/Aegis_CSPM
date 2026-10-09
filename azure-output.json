@@ -1,0 +1,10 @@
+{
+  "collected_at": "2026-10-08T09:40:38.889372+00:00",
+  "source": "Azure Log Analytics AzureActivity query",
+  "telemetry_complete": false,
+  "records": [],
+  "partial_error": true,
+  "limitations": [
+    "Default demo-workspace not found. Configure a real Log Analytics Workspace ID for live telemetry."
+  ]
+}

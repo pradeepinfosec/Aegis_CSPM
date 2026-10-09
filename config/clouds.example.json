@@ -1,0 +1,10 @@
+{
+  "mode": "demo",
+  "aws": {"enabled": false, "profile": "", "regions": ["ap-south-1", "us-east-1"], "role_arn": "", "external_id_env": "AWS_EXTERNAL_ID", "securityhub": false},
+  "azure": {"enabled": false, "subscriptions": ["YOUR_SUBSCRIPTION_ID"], "credential": "default", "defender_assessments": false},
+  "gcp": {"enabled": false, "projects": ["YOUR_PROJECT_ID"], "scc_parent": "", "scc_location": "global"},
+  "business_context": {"default": {"criticality": null, "sensitivity": null}, "resources": {}},
+  "limits": {"max_resources": 10000, "max_pages": 100},
+  "ai": {"enabled": false, "model": "", "allow_external_processing": false},
+  "note": "Secrets belong in .env or the cloud SDK credential chain. Never enter credentials into the dashboard. Mode is selected explicitly by the CLI, not this file."
+}

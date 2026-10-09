@@ -1,0 +1,33 @@
+# Node.js
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Java / Maven
+target/
+*.jar
+*.war
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Logs
+*.log

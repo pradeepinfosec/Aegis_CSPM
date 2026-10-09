@@ -1,0 +1,32 @@
+S.No,Title,Resource,Cloud,Control,Severity,Score,Confidence,Review
+1,"Storage transport protection is absent (TLS TLS1_0)","uarlogarchive23217",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+2,"Storage blocks anonymous access configuration","uarlogarchive23217",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+3,"Storage transport protection is absent (TLS TLS1_0)","publicarchive11749",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+4,"Storage permits anonymous access configuration","publicarchive11749",AZURE,STO005,FAILED,50.0,SUPPORTED,open
+5,"Storage transport protection is absent (TLS TLS1_0)","publicarchive24730",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+6,"Storage permits anonymous access configuration","publicarchive24730",AZURE,STO005,FAILED,50.0,SUPPORTED,open
+7,"Storage transport protection is absent (TLS TLS1_0)","publicarchive816",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+8,"Storage permits anonymous access configuration","publicarchive816",AZURE,STO005,FAILED,50.0,SUPPORTED,open
+9,"Storage transport protection is absent (TLS TLS1_0)","regulateddata11749",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+10,"Storage blocks anonymous access configuration","regulateddata11749",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+11,"Storage transport protection is absent (TLS TLS1_0)","regulateddata24730",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+12,"Storage blocks anonymous access configuration","regulateddata24730",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+13,"Storage transport protection is absent (TLS TLS1_0)","regulateddata816",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+14,"Storage blocks anonymous access configuration","regulateddata816",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+15,"Storage transport protection is absent (TLS TLS1_0)","unobserved11749",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+16,"Storage blocks anonymous access configuration","unobserved11749",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+17,"Storage transport protection is absent (TLS TLS1_0)","unobserved24730",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+18,"Storage blocks anonymous access configuration","unobserved24730",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+19,"Storage transport protection is absent (TLS TLS1_0)","unobserved816",AZURE,STO004,FAILED,65.0,SUPPORTED,open
+20,"Storage blocks anonymous access configuration","unobserved816",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+21,"Storage transport protection (TLS TLS1_2)","evidencevault2347",AZURE,STO004,PASSED,0.0,SUPPORTED,closed
+22,"Storage blocks anonymous access configuration","evidencevault2347",AZURE,STO005,PASSED,0.0,SUPPORTED,closed
+23,"Network has a broad inbound administration rule","legacy-admin-ingress",AZURE,NET001,FAILED,80.0,SUPPORTED,open
+24,"Workload is reachable from the Internet","test-api-1234",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+25,"Workload is reachable from the Internet","customer-api-24730",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+26,"Workload is reachable from the Internet","customer-api-11749",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+27,"Workload is reachable from the Internet","customer-api-816",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+28,"Workload is reachable from the Internet","internal-worker-816",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+29,"Workload is reachable from the Internet","internal-worker-24730",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+30,"Workload is reachable from the Internet","Telistatsoftware",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
+31,"Workload is reachable from the Internet","proive-innoventic",AZURE,EXP001,FAILED,55.0,SUPPORTED,open
